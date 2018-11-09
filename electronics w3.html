@@ -1,0 +1,348 @@
+<DOCTYPE! html>
+<html>
+<head> 
+<title>Soft Prototyping</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+     
+    <!-- dropdown-->
+        <div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="about%20me.html">About me</a>
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="Inflatables%20w1.html">Week 1 Inflatables</a>
+      <a href="electronics%20w2.html">Week 2 Electronics 1.1</a>
+      <a href="electronics%20w3.html">Week 3 Electronics 1.2 Attiny</a>
+      <a href="#">Link 5</a>
+        <a href="#">Link 6</a>
+        <a href="#">Link 7</a>
+        <a href="#">Link 8</a>
+        <a href="#">Link 9</a>
+        <a href="#">Link 10</a>
+    </div>
+  </div> 
+</div>
+    
+</head>    
+<body style="background-color:beige;">
+   
+<h2 class="inflatables-h2" id="inflatables-h2"> Electronics 1.2 Attiny</h2>
+
+    
+<p style ="text-align: center"> This documentation is for seting up an Attiny microprocessor for LED and a speaker.
+<br>
+This process is more complecated than the process in Electronics 1.1 but if you follow the
+<br>
+documentation you should do just fine.  
+<br>
+For this project you will need a Speaker, Crocodile clips, resistor, wire, bread-board, 
+<br>
+an Attiny, Arduino board, Program Arduino and Soldering space.
+<br>
+So, let's have some fun!
+</p>
+
+
+
+    <!-- Arduino program-->
+    <img src="electronics1.2/img1.jpg" width="500px" class="img1"> 
+
+    <h3 style="color: cadetblue" class="week1-head"> Set Up Arduino</h3>
+    
+    <p class="week1-para1"> First of all you will need to download the Arduino Software. 
+<br>
+You can download it from this link for free <a href="https://www.arduino.cc/en/Main/Software">Download</a> 
+<br>
+After you are done with the installation you need to set up your first sketch as it
+<br>
+is shown on the photo. (in English: File-> Examples-> 01.Basics-> Blink) 
+<br> 
+When you open the Blink sketch you will notice that the code is already there.  
+</p>
+
+       
+    <!-- pin output on program-->
+  <img src="electronics1.2/img4setupled.jpg" width="500px" class="img1"> 
+
+    <h3 style="color: cadetblue" class="week1-head"> Set up the OUTPUT pin</h3>
+    
+    <p class="week1-para1"> In the code that apears in the Blink sketch, there is one line indicating
+<br> 
+ the OUTPUT pin called pinMODE. There you should put the the number  
+<br>
+of the pin (Arduino board pin) in which the + from the LED will go.
+</p>
+ 
+    <!-- choosing the pin for LED-->
+  <img src="electronics1.2/img2arduino.jpg" width="500px" class="img1"> 
+
+    <h3 style="color: cadetblue" class="week1-head"> Choosing the LED pinMODE</h3>
+    
+    <p class="week1-para1"> On the Arduino Board you can see the pin numbers. GND always indicates
+<br> 
+the minus. So to attach and LED there it is logical to choose the nearby pin 
+<br>
+for the +. In the photo shown above the pin chosen is number 13 as it is 
+<br>
+exactly next to the GND one. In the Arduino program then we put OUTPUT pinmode 13.  
+    </p>
+    
+    <h5 style="color: red" class="week1-para1"> As the Arduino board is very small you have to make sure you are on the correct pins.
+    <br>
+    THE ARDUINO BOARD MUST STAY UNPLUGGED FROM THE PC AS LONG AS WE ARE MAKING CHANGES!!!</h5>
+     
+     <!-- example of led in arduino-->
+  <img src="electronics1.2/img3arduinoled.jpg" width="500px" class="img1"> 
+
+    <h3 style="color: cadetblue" class="week1-head"> Example</h3>
+    
+    <p class="week1-para1"> After the set up is finished for our try out we can press in the up left corner
+<br>
+Prove ( to scan for any mistakes) and then after the scan connect the USB from 
+<br>
+the Arduino to the PC and press Upload. Then if everything is correct the LED
+<br>
+should behave in the way we have programmed it to.
+<br>
+This is just an example of how I have positioned the LED. 
+    </p>
+ 
+   <!-- setting the speed of blinking-->
+  <img src="electronics1.2/img4setupled.jpg" width="500px" class="img1"> 
+
+    <h3 style="color: cadetblue" class="week1-head"> Blink</h3>
+    
+    <p class="week1-para1"> The sketch Blink if obviously for making the LED blink (wow.. captain obvious! :D )
+<br>
+In the lower part of the code after the second commentar ( commentar indication // )
+<br>
+you will find the settings for the blinking qualities. After Digitalwrite
+<br>
+in the brackets you should put again the pin of the LED. The next line says
+<br>
+"delay": in there you can put a number and experiment with the delay of the blink
+<br>
+and different time values between each blink.
+    </p>
+    
+ <!--resistor-->
+  <img src="electronics1.2/img5resistor.jpg" width="500px" class="img1"> 
+
+    <h3 style="color: cadetblue" class="week1-head"> Resistor</h3>
+    
+    <p class="week1-para1">
+    
+    <h5 style="color: red" class="week1-para1">THE ARDUINO BOARD MUST STAY UNPLUGED FROM THE PC AS LONG AS WE ARE MAKING CHANGES!!!</h5>
+    
+    <p class="week1-para1"> 
+Now, because the Arduino board has always 5 V output we want to use a resistor for
+<br>
+ our LED in case that it needs less than 5V. The resistor will come in the pin of 
+<br>
+the input (13). Than to connect it with the LED, from the electronic circuit we have
+<br> 
+created, we will use crocodile clips. It all needs to be connected in order the 
+<br>
+electricity to flow. In the GND pin we put some of the additional wire and we 
+<br>
+attach to it another crocodile clip. The crocodile clip connected with pin 13
+<br>
+goes to the + on the electronic circuit. The crocodile clip connected to the GND
+<br>
+goes to the - of the electronic circuit.
+<br>
+This is how we establish a connection between our Arduino board and the LED circuit.
+    </p> 
+    
+   
+   <!--resistor-->
+  <img src="electronics1.2/img6breadboardattiny.jpg" width="500px" class="img1"> 
+
+    <h3 style="color: cadetblue" class="week1-head"> Bread Board</h3>
+    
+    <p class="week1-para1">
+    
+    <h5 style="color: red" class="week1-para1">THE ARDUINO BOARD MUST STAY UNPLUGED FROM THE PC AS LONG AS WE ARE MAKING CHANGES!!!</h5>
+    
+    <p class="week1-para1"> 
+The bread Board is a board with many "wholes" in it. We use it to program the Attiny.
+<br>
+ We have to put the Attiny in the middle of the board and press it good, because the 
+<br>
+bottom of the board is conductive (this is how we comunicate between the Arduino board
+<br> 
+and the Attiny). You can see rolls of wholes for each of the Attiny's legs. These pins 
+<br>
+are connected. For example, the roll of pins on the bread board connected to each foot 
+<br>
+is responsable (connected) for this Attiny pin number (foot). 
+<br>
+goes to the + on the electronic circuit. The crocodile clip connected to the GND
+<br>
+goes to the - of the electronic circuit.
+<br>
+This is how we establish a connection between our Arduino board and the LED circuit.
+    </p> 
+    
+    
+    
+      <!--pin 9 for the led-->
+  <img src="electronics1.2/img6ledpin9.jpg" width="500px" class="img1"> 
+
+    <h3 style="color: cadetblue" class="week1-head"> In this exact assignment we changed the pinkMODE for LED to 9</h3>
+    
+    <p class="week1-para1">
+    
+    <h5 style="color: red" class="week1-para1">THE ARDUINO BOARD MUST STAY UNPLUGED FROM THE PC AS LONG AS WE ARE MAKING CHANGES!!!</h5>
+    
+    <p class="week1-para1"> 
+Because of including the speaker we changed the pinMODE from 13 to 9.
+    </p> 
+ 
+    
+<!-- four images in a roll--> 
+<div class="row">
+  <div class="column">
+    <img src="electronics1.2/img7,1.jpg" alt="Snow" style="width:80%; margin-top: 10%; margin-left: 6%">
+  </div>
+  <div class="column">
+    <img src="electronics1.2/img7,2.jpg" alt="Forest" style="width:80%; margin-top: 10%">
+  </div>
+  <div class="column">
+    <img src="electronics1.2/img7,3.jpg" alt="Mountains" style="width:80%; margin-left: 6%;">
+  </div>
+    <div class="column">
+    <img src="electronics1.2/img7,4.jpg" alt="Mountains" style="width:80%">
+  </div>
+</div>
+     <h3 style="color: cadetblue" class="week1-head"> Check those every time you upload new setting to the Attiny</h3>
+    
+      
+    <p class="week1-para1">
+    
+    <h5 style="color: red" class="week1-para1">THE ARDUINO BOARD MUST STAY UNPLUGED FROM THE PC AS LONG AS WE ARE MAKING CHANGES!!!</h5>
+    
+    <p class="week1-para1"> 
+We have to always check for those to be the same in order to program the Attiny successfully. 
+    <br> 
+Normally, these setting should not change but it is possible for them to restart.
+    </p> 
+   
+    
+     <!--connecting it all-->
+  <img src="electronics1.2/img7setupattiny.jpg" width="500px" class="img1"> 
+
+    <h3 style="color: cadetblue" class="week1-head"> The Connection</h3>
+    
+    <p class="week1-para1"> 
+To asign settings to each leg of the Attiny we have to connect everythings we worked with
+<br>
+until now: Arduino Program + Arduino Board + Bread Board (Attiny)
+    </p> 
+<h5 style="color: red" class="week1-para1">THE ARDUINO BOARD MUST STAY UNPLUGED FROM THE PC AS LONG AS WE ARE MAKING CHANGES!!!</h5>
+    
+    
+<!--SPEAKER-->
+  <img src="electronics1.2/img8solderthespeaker.jpg" width="500px" class="img1"> 
+
+    <h3 style="color: cadetblue" class="week1-head"> The Speaker</h3>
+    
+    <p class="week1-para1"> 
+Normally, when you buy speakers online they come without the connecting wires.
+<br>
+If this is the case with your speaker then you have to solder some wires to the speaker.
+<br>
+For the sake of comfort, you can choose two different colors wire, to make the difference 
+<br>
+easier. 
+    </p> 
+    
+    
+    <!--bread board and speaker-->
+  <img src="electronics1.2/img9tryspeakeronbreadoard.jpg" width="500px" class="img1"> 
+
+    <h3 style="color: cadetblue" class="week1-head"> Programming the Speaker</h3>
+    
+    <p class="week1-para1"> 
+The speaker only has + and - . So to connect and program it too, you have to connect
+<br>
+it to the Bread Board too using crocodile clips. 
+    </p> 
+<h5 style="color: red" class="week1-para1">ADD A PHOTO OF THE CONNECTION ADRIANA</h5>
+    
+  
+     <!--led, speaker connection graph from adrianar-->
+  <img src="electronics1.2/img9tryspeakeronbreadoard.jpg" width="500px" class="img1"> 
+
+    <h3 style="color: cadetblue" class="week1-head"> Programming the Speaker</h3>
+    
+    <p class="week1-para1"> 
+The speaker only has + and - . So to connect and program it too, you have to connect
+<br>
+it to the Bread Board too using crocodile clips. 
+    </p> 
+    
+    
+ 
+     <!--Christmas card-->
+  <img src="electronics1.2/img10makeacircle.jpg" width="500px" class="img1"> 
+
+    <h3 style="color: cadetblue" class="week1-head"> Attiny programmed, now crafting</h3>
+    
+    <p class="week1-para1"> 
+Based on my personal opinion, I decided to make two separate cards: one with LED and 
+<br>
+one with a Speaker. So the following part of this documentation will focus on the 
+<br>
+Speaker only.
+<br> 
+So, I had to create an electrical circuit connecting the speaker with a battery
+<br>
+including a switch button as well. Of course all of these connected to the Attiny.
+<br>
+It is important to keep in mind that the cupper tape for each leg of the Attiny should
+<br>
+not have any points of touching as this will disturb the conduction. Because of the size
+<br>
+of the Attiny the cupper tape should be very thin or just cut thinner. 
+    </p> 
+    
+    
+    
+    
+     <!--All you need-->
+  <img src="electronics1.2/img11solderingitall.jpg" width="500px" class="img1"> 
+
+    <h3 style="color: cadetblue" class="week1-head"> Solder it </h3>
+    
+    <p class="week1-para1"> 
+And after the scetch is ready too, then we can connect all the components by soldering. 
+    </p>
+    
+     <!--done-->
+  <img src="electronics1.2/img13solderdone.jpg" width="500px" class="img1"> 
+
+    <h3 style="color: cadetblue" class="week1-head"> Solder it </h3>
+    
+    <p class="week1-para1"> 
+This is an example of my finished electric circuit using Attiny and a Speaker.
+    </p>
+    
+    
+    
+
+    
+    <!-- linking previous and next page-->   
+<a href="index.html" class="previous round">&#8249;</a>
+<a href="electronics%20w2.html" class="next round">&#8250;</a>
+
+
+<!-- maybe create a link to go to the next part -->
+
+</body>
+      
+</html>
