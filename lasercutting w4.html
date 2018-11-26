@@ -1,0 +1,266 @@
+<DOCTYPE! html>
+<html>
+<head> 
+<title>Soft Prototyping</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css"> 
+    
+    <!-- dropdown-->
+        <div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="about%20me.html">About me</a>
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="Inflatables%20w1.html">Week 1 Inflatables</a>
+      <a href="electronics%20w2.html">Week 2 Electronics 1.1</a>
+      <a href="electronics%20w3.html">Week 3 Electronics 1.2 Attiny</a>
+      <a href="lasercutting%20w4.html">Week 4 Laser Cutting an Inflatable Pattern</a>
+       <a href="3d%20attaching%20components%20w5.html">3d attaching components w5</a>
+        <a href="3d%20mold%20soft%20robotics%20w6.html">3d mold, Inflatable, Soft Robotics</a>
+        <a href="#">Link 8</a>
+        <a href="#">Link 9</a>
+        <a href="#">Link 10</a>
+    </div>
+  </div> 
+</div>
+    </head>
+   
+    <body style="background-color:beige;">
+   
+<h2 class="inflatables-h2" id="inflatables-h2"> Laser Cutter, Garment</h2>
+
+    
+<p style ="text-align: center"> This is documentation for preparing a vector interlocking pattern
+<br>
+and cutting it using the Laser Cutter. The pattern should have male and female interlocking parts.
+<br>
+At the end the whole pattern, or a piece of it should be included into a garment.  
+</p>
+
+
+
+    <!-- Patternmaking female-->
+    <img src="lasercuttingw4/img0Illustrator.jpg" width="500px" class="img1"> 
+
+    <h3 style="color: cadetblue" class="week1-head"> Create your Pattern using Ai or any other program for vectors</h3>
+    
+    <p class="week1-para1">
+Using a vector program create your female and male part. I found out that geometrically correct shapes 
+<br>
+create great patterns, only using their original shapes. You can find many inspirations online!
+<br>
+So the first step is to create each of your pieces. Here I am going to show you my male and 
+<br>
+female parts later on, and am going to give you some small tips i find for usefull. 
+<br> 
+This on the photo is the vector for my female part (the part of the pattern in which 
+<br>
+the lock has to go) I have used circles. You can use anything else! 
+</p>
+
+       
+    <!-- 0.001 pt-->
+  <img src="lasercuttingw4/img1,001pt.jpg" width="500px" class="img1"> 
+
+    <h3 style="color: cadetblue" class="week1-head"> 0,001 and bigger values</h3>
+    
+    <p class="week1-para1"> 
+When you vector is ready you must take care to set up the stroke values. 
+<br> 
+0.001 pt stroke will be cut. Any bigger values will be engraved.  
+<br>
+On the setting for the Laser Cutter there are setting for the engraving
+<br>
+where you can choose the deepness.
+</p>
+ 
+    <!-- choosing the pin for LED-->
+  <img src="lasercuttingw4/img5Male.jpg" width="500px" class="img1"> 
+
+    <h3 style="color: cadetblue" class="week1-head"> Male Part of the Pattern</h3>
+    
+    <p class="week1-para1">
+This is the male part of my pattern. I have no engraving so all the strokes
+<br> 
+are set up with 0,001 pt value.  
+    </p>
+    
+     <!-- Rhino Print-->
+  <img src="lasercuttingw4/img2Rhino.jpg" width="500px" class="img1"> 
+
+    <h3 style="color: cadetblue" class="week1-head">From Rhine to Laser Cutter</h3>
+    
+    <p class="week1-para1"> 
+Because of technical issues, we were using Rhino instead of Adobe Illustrator.
+<br>
+When you open your .dxf file (saved from .ai to .dxf just so it can be opne in
+<br>
+Rhino) you pres Cntrl + P for printing and you will get the window showed on the 
+<br>
+photo. Then you go to Settings to turn on the Laser Cutter Settings. 
+    </p>
+ 
+   <!-- Laser Cut settings-->
+  <div class="row">
+  <div class="column">
+    <img src="lasercuttingw4/img3RhinoPrintSettings.jpg" alt="Snow" style="width:80%; margin-top: 10%; margin-left: 6%">
+  </div>
+  <div class="column">
+    <img src="lasercuttingw4/img6RhinoPrintSettings.jpg" alt="Forest" style="width:80%; margin-top: 10%">
+  </div>
+        </div>
+
+    <h3 style="color: cadetblue" class="week1-head">Setting up the Laser Cutter Zing</h3>
+    
+    <p class="week1-para1"> 
+I have two photos exaplining the setting for the two different materials I used.
+<br>
+The photo on the left is for the female part of the interlocking pattern.
+<br>
+I made the female part using a thing material and the male part using thicker one.
+<br>
+I thought that this would help the interlocking to be stable and it worked. 
+<br>
+Another way of making the interlocking stable is to make the holes in the female
+<br>
+part smaller than the size of the male lock. I also did this (see photos below).
+<br>
+On the left photo (very thin matterial) the settings are as follows:
+</p>
+<p style="color:red;" class="week1-para1">
+    
+    
+                                               Speed: 100%
+<br>
+                                               Power: 20%
+<br>
+                                               Frq: 500 Hz
+</p>
+
+        
+<p class="week1-para1"> 
+Speed parameter : signifies the movement of the laser head.
+<br>
+Power parameter: output power (for thicker materials you need more power) 
+<br>
+Frequency parameter: laser pulses per second
+<br>
+On the right photo (thicker material) the settings are as follows:
+</p>
+        
+<p style="color:red;" class="week1-para1">
+        
+    
+                                               Speed: 90%
+<br>
+                                               Power: 50%
+<br>
+                                               Frq: 2500 Hz
+<br>
+    </p>
+    
+ <!-- cut out female part-->
+  <img src="lasercuttingw4/img4PrintedFemaleInterlock.jpg" width="500px" class="img1"> 
+
+    <h3 style="color: cadetblue" class="week1-head"> Female Interlock </h3>
+    
+    <p class="week1-para1"> 
+I used filtz for both patterns. The female part uses thin filtz (2mm)
+<br>
+The male part uses thicker filtz immitating material: polyacryl (5mm)  
+<br>
+(see following photo). You can see on the photo that the female part
+<br> 
+turned out great. There are no burned traces, which occurs when the 
+<br>
+settings are a bit off. A way of checking out the settings is making  
+<br>
+a color map. This is a must do always when you laser cut new materials!
+    </p> 
+    
+   
+   <!--color mapping-->
+  <img src="lasercuttingw4/colormapping.jpg" width="500px" class="img1"> 
+
+    <h3 style="color: cadetblue" class="week1-head"> Color Mapping</h3>
+    
+    <p class="week1-para1">
+    
+    <h5 style="color: red" class="week1-para1">All values have to be RGB correct (ex: Red: 255, 0, 0)</h5>
+    
+    <p class="week1-para1"> 
+For making a collor map you need to create 6 sqares on Ai and give them the 7 main 
+<br>
+ RGB color values : red (255,0,0), green (0,255,0), blue(0,0,255), yellow (255,255,0),  
+<br>
+cyan(0,255,255) and magenta (255,0,255). When you are doen with the ai color map 
+<br> 
+ file press Cntr + P to go to the laser cutter settings. Than choose from the top 
+<br>
+panel Color Maping and give each color different values to check wich one is the most 
+<br>
+appropriate for your material. Normally we leave the speed at 100% the frequency  
+<br>
+at 50% and we change the power values. The colors on the color mapping should be 
+<br>
+the same order as the colors in the ai file.
+    </p> 
+    
+    
+    
+      <!--female and male parts-->
+  <div class="row">
+  <div class="column">
+    <img src="lasercuttingw4/img7MaleLasercut.jpg" alt="Snow" style="width:80%; margin-top: 10%; margin-left: 6%">
+  </div>
+  <div class="column">
+    <img src="lasercuttingw4/img8FemaleLaserCut.jpg" alt="Forest" style="width:80%; margin-top: 10%">
+  </div>
+</div>
+
+    <h3 style="color: cadetblue" class="week1-head">Female and Male interlocking parts</h3>
+    
+    <p class="week1-para1"> 
+This is an example of my female and male parts of the pattern.
+    </p>
+ 
+    
+<!-- Garment--> 
+ 
+        <img src="lasercuttingw4/img9Garment.jpg" width="500px" class="img1"> 
+       
+        <h3 style="color: cadetblue" class="week1-head"> Garment </h3>
+    
+    <p class="week1-para1"> 
+I used a piece of the pattern as a closing mechanism for this vest.
+    </p> 
+    
+        
+<!-- full pattern--> 
+ 
+        <img src="lasercuttingw4/img10fullpattern.jpg" width="500px" class="img1"> 
+       
+        <h3 style="color: cadetblue" class="week1-head"> Pattern </h3>
+    
+    <p class="week1-para1"> 
+This is the whole pattern which can be continued forever.
+    </p> 
+     
+<!-- kali initials -->    
+<p class="center-KaLi" id="center-KaLi">
+FabLab Kamp-Lintfort,
+Ms. Adriana Cabrera,
+Soft Prototyping
+</p>  
+    
+  <!-- linking previous and next page-->   
+<a href="electronics%20w3.html" class="previous round">&#8249;</a>
+<a href="3d%20attaching%20components%20w5.html" class="next round">&#8250;</a>
+
+
+</body>
+      
+</html>

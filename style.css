@@ -105,7 +105,34 @@ text-align: center;
     margin-top: 50px;
     margin-left: 30px;
     }
+   /*center the photo in about me page*/
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
 
+/*center the text under the photo in about me page */
+.center-Text{
+    padding: 70px 0;
+    text-align: center;
+}
+
+
+/*center KaLi must be there info */
+.center-KaLi {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+
+#center-KaLi {
+    padding: 70px 0;
+    text-align: center;
+}
+ 
 /* paragraph text setting */
 .week1-para1 {
     margin-top: 30px;
